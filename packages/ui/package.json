@@ -1,5 +1,5 @@
 {
-  "name": "@rss-reader/ui",
+  "name": "@quiet-rss/ui",
   "version": "1.0.0",
   "description": "Shared UI components for RSS Reader",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@rss-reader/types": "1.0.0",
+    "@quiet-rss/types": "1.0.0",
     "react": "^18.0.0"
   },
   "devDependencies": {

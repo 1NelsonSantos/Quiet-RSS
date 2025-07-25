@@ -1,5 +1,5 @@
 {
-  "name": "@rss-reader/core",
+  "name": "@quiet-rss/core",
   "version": "1.0.0",
   "description": "Shared business logic for RSS Reader",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "rss-parser": "^3.13.0",
-    "@rss-reader/types": "1.0.0"
+    "@quiet-rss/types": "1.0.0"
   },
   "devDependencies": {
     "typescript": "^5.0.0"

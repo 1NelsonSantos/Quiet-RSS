@@ -1,5 +1,5 @@
 {
-  "name": "@rss-reader/types",
+  "name": "@quiet-rss/types",
   "version": "1.0.0",
   "description": "Shared TypeScript types for RSS Reader",
   "main": "dist/index.js",

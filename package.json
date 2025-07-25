@@ -8,8 +8,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "npm run dev --workspace=@rss-reader/desktop",
-    "dev:desktop": "npm run dev --workspace=@rss-reader/desktop",
+    "dev": "npm run dev --workspace=@quiet-rss/desktop",        
+    "dev:desktop": "npm run dev --workspace=@quiet-rss/desktop", 
     "build": "npm run build --workspaces --if-present",
     "clean": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules",
     "format": "prettier --write .",
