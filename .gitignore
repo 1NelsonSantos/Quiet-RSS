@@ -211,3 +211,6 @@ jspm_packages/
 # Electron build output
 app/dist/
 release/
+
+# Other
+progress.txt
