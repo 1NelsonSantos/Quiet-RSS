@@ -1,11 +1,7 @@
 import type { Feed } from './feed';
 import type { Article } from './article';
 import type { Category } from './category';
-import type {
-  UserSettings,
-  ReadingPreferences,
-  NotificationSettings,
-} from './user';
+import type { UserSettings, ReadingPreferences, NotificationSettings } from './user';
 import type { FeedCreatePayload } from './feed';
 import type { CategoryCreatePayload } from './category';
 

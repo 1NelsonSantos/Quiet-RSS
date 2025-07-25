@@ -31,10 +31,7 @@ export class StorageManager {
    * @throws Error if serialization or storage fails
    */
   async saveFeeds(feeds: Feed[]): Promise<void> {
-    await this.adapter.setItem(
-      StorageManager.KEYS.FEEDS,
-      JSON.stringify(feeds)
-    );
+    await this.adapter.setItem(StorageManager.KEYS.FEEDS, JSON.stringify(feeds));
   }
 
   /**
@@ -59,10 +56,7 @@ export class StorageManager {
    * @throws Error if serialization or storage fails
    */
   async saveArticles(articles: Article[]): Promise<void> {
-    await this.adapter.setItem(
-      StorageManager.KEYS.ARTICLES,
-      JSON.stringify(articles)
-    );
+    await this.adapter.setItem(StorageManager.KEYS.ARTICLES, JSON.stringify(articles));
   }
 
   /**
@@ -87,10 +81,7 @@ export class StorageManager {
    * @throws Error if serialization or storage fails
    */
   async saveCategories(categories: Category[]): Promise<void> {
-    await this.adapter.setItem(
-      StorageManager.KEYS.CATEGORIES,
-      JSON.stringify(categories)
-    );
+    await this.adapter.setItem(StorageManager.KEYS.CATEGORIES, JSON.stringify(categories));
   }
 
   /**
@@ -115,10 +106,7 @@ export class StorageManager {
    * @throws Error if serialization or storage fails
    */
   async saveSettings(settings: UserSettings): Promise<void> {
-    await this.adapter.setItem(
-      StorageManager.KEYS.SETTINGS,
-      JSON.stringify(settings)
-    );
+    await this.adapter.setItem(StorageManager.KEYS.SETTINGS, JSON.stringify(settings));
   }
 
   /**
