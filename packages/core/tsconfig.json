@@ -6,6 +6,7 @@
     "emitDeclarationOnly": false,
     "jsx": "react-jsx",
     "baseUrl": ".",
+    "noEmit": false,
     "paths": {
       "@quiet-rss/types": ["../types/src"]
     }

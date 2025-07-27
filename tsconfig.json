@@ -21,20 +21,14 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@rss-reader/core": ["packages/core/src"],
-      "@rss-reader/core/*": ["packages/core/src/*"],
-      "@rss-reader/ui": ["packages/ui/src"],
-      "@rss-reader/ui/*": ["packages/ui/src/*"],
-      "@rss-reader/types": ["packages/types/src"],
-      "@rss-reader/types/*": ["packages/types/src/*"]
+      "@quiet-rss/core": ["packages/core/src"],
+      "@quiet-rss/core/*": ["packages/core/src/*"],
+      "@quiet-rss/ui": ["packages/ui/src"],
+      "@quiet-rss/ui/*": ["packages/ui/src/*"],
+      "@quiet-rss/types": ["packages/types/src"],
+      "@quiet-rss/types/*": ["packages/types/src/*"]
     }
   },
-  "include": [
-    "apps/*/src/**/*",
-    "packages/*/src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["apps/*/src/**/*", "packages/*/src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
