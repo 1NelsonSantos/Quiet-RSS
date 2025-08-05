@@ -9,6 +9,8 @@ export interface FeedValidationResult {
   feedType?: 'rss' | 'atom';
   title?: string;
   error?: string;
+  errorType?: import('./parser').RSSErrorType;
+  statusCode?: number;
 }
 
 export interface RefreshResult {
