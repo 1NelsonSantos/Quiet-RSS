@@ -7,6 +7,7 @@ export interface SearchBarProps extends Omit<BaseComponentProps, 'loading' | 'va
   onSearch?: (value: string) => void;
   onClear?: () => void;
   placeholder?: string;
+  id?: string;
   className?: string;
   style?: React.CSSProperties;
   autoFocus?: boolean;
@@ -33,6 +34,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   onSearch,
   onClear,
   placeholder = 'Search...',
+  id,
   size = 'md',
   disabled = false,
   autoFocus = false,
@@ -94,6 +96,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
       <input
         type="text"
+        id={id}
         className="qr-search-bar__input"
         value={value}
         onChange={handleChange}
