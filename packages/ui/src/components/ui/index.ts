@@ -1,8 +1,8 @@
-export { Button } from './Button';
-export type { ButtonProps } from './Button';
+export { Button } from './button';
+export type { ButtonProps } from './button';
 
-export { Card } from './Card';
-export type { CardProps } from './Card';
+export { Card } from './card';
+export type { CardProps } from './card';
 
-export { SearchBar } from './SearchBar';
-export type { SearchBarProps } from './SearchBar';
+export { SearchBar } from './search-bar';
+export type { SearchBarProps } from './search-bar';

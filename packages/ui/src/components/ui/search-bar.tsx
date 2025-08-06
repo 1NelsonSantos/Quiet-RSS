@@ -41,18 +41,18 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   style,
 }) => {
   const [internalValue, setInternalValue] = useState('');
-  
+
   // Use controlled value if provided, otherwise use internal state
   const value = controlledValue !== undefined ? controlledValue : internalValue;
   const isControlled = controlledValue !== undefined;
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
-    
+
     if (!isControlled) {
       setInternalValue(newValue);
     }
-    
+
     onChange?.(newValue);
   };
 
@@ -65,11 +65,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
   const handleClear = () => {
     const newValue = '';
-    
+
     if (!isControlled) {
       setInternalValue(newValue);
     }
-    
+
     onChange?.(newValue);
     onClear?.();
   };
@@ -80,12 +80,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
   const showClearButton = clearable && value.length > 0 && !disabled;
 
-  const classes = [
-    'qr-search-bar',
-    `qr-search-bar--${size}`,
-    disabled && 'qr-search-bar--disabled',
-    className,
-  ]
+  const classes = ['qr-search-bar', `qr-search-bar--${size}`, disabled && 'qr-search-bar--disabled', className]
     .filter(Boolean)
     .join(' ');
 
@@ -93,10 +88,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     <div className={classes} style={style}>
       <div className="qr-search-bar__icon qr-search-bar__icon--search">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
       </div>
-      
+
       <input
         type="text"
         className="qr-search-bar__input"
@@ -108,7 +103,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         autoFocus={autoFocus}
         aria-label="Search"
       />
-      
+
       {showClearButton && (
         <button
           type="button"
@@ -117,7 +112,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           aria-label="Clear search"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
           </svg>
         </button>
       )}
