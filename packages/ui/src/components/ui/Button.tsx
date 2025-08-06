@@ -7,6 +7,7 @@ export interface ButtonProps extends BaseComponentProps {
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -19,6 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   type = 'button',
   className = '',
+  style,
 }) => {
   const classes = [
     'qr-button',
@@ -36,6 +38,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       type={type}
       className={classes}
+      style={style}
       disabled={disabled || loading}
       onClick={onClick}
       aria-busy={loading}

@@ -1,0 +1,235 @@
+/* LoadingSpinner Component Styles */
+.qr-loading-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--qr-spacing-xs);
+}
+
+.qr-loading-spinner--disabled {
+  opacity: 0.5;
+}
+
+/* Size variants */
+.qr-loading-spinner--sm {
+  width: 16px;
+  height: 16px;
+}
+
+.qr-loading-spinner--md {
+  width: 24px;
+  height: 24px;
+}
+
+.qr-loading-spinner--lg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Color variants */
+.qr-loading-spinner--primary {
+  color: var(--qr-color-primary);
+}
+
+.qr-loading-spinner--secondary {
+  color: var(--qr-color-secondary-text);
+}
+
+.qr-loading-spinner--ghost {
+  color: var(--qr-color-ghost-text);
+}
+
+.qr-loading-spinner--danger {
+  color: var(--qr-color-danger);
+}
+
+/* Label  */
+.qr-loading-spinner__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Spinner Type - SVG Circle */
+.qr-loading-spinner--spinner .qr-loading-spinner__svg {
+  width: 100%;
+  height: 100%;
+  animation: qr-spinner-rotate 1s linear infinite;
+}
+
+.qr-loading-spinner__circle-bg {
+  stroke: currentColor;
+  opacity: 0.2;
+}
+
+.qr-loading-spinner__circle {
+  stroke: currentColor;
+  animation: qr-spinner-dash 1.5s ease-in-out infinite;
+}
+
+@keyframes qr-spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes qr-spinner-dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+/* Dots Type */
+.qr-loading-spinner--dots {
+  flex-direction: row;
+}
+
+.qr-loading-spinner__dots {
+  display: flex;
+  gap: calc(var(--qr-spacing-xs) / 2);
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-loading-spinner__dot {
+  background-color: currentColor;
+  border-radius: 50%;
+  animation: qr-dots-bounce 1.4s ease-in-out infinite both;
+}
+
+/* Dot sizes based on spinner size */
+.qr-loading-spinner--sm .qr-loading-spinner__dot {
+  width: 3px;
+  height: 3px;
+}
+
+.qr-loading-spinner--md .qr-loading-spinner__dot {
+  width: 4px;
+  height: 4px;
+}
+
+.qr-loading-spinner--lg .qr-loading-spinner__dot {
+  width: 6px;
+  height: 6px;
+}
+
+.qr-loading-spinner__dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.qr-loading-spinner__dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes qr-dots-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Bars Type */
+.qr-loading-spinner--bars {
+  flex-direction: row;
+}
+
+.qr-loading-spinner__bars {
+  display: flex;
+  gap: calc(var(--qr-spacing-xs) / 3);
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.qr-loading-spinner__bar {
+  background-color: currentColor;
+  animation: qr-bars-scale 1s ease-in-out infinite;
+}
+
+/* Bar sizes based on spinner size */
+.qr-loading-spinner--sm .qr-loading-spinner__bar {
+  width: 2px;
+  height: 12px;
+}
+
+.qr-loading-spinner--md .qr-loading-spinner__bar {
+  width: 3px;
+  height: 18px;
+}
+
+.qr-loading-spinner--lg .qr-loading-spinner__bar {
+  width: 4px;
+  height: 24px;
+}
+
+.qr-loading-spinner__bar:nth-child(1) {
+  animation-delay: -0.4s;
+}
+
+.qr-loading-spinner__bar:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.qr-loading-spinner__bar:nth-child(3) {
+  animation-delay: -0.2s;
+}
+
+.qr-loading-spinner__bar:nth-child(4) {
+  animation-delay: -0.1s;
+}
+
+@keyframes qr-bars-scale {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Inline spinner (for buttons, etc.) */
+.qr-loading-spinner--inline {
+  flex-direction: row;
+  gap: var(--qr-spacing-xs);
+}
+
+.qr-loading-spinner--inline .qr-loading-spinner__label {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: unset;
+  white-space: normal;
+  font-size: inherit;
+  color: currentColor;
+}
