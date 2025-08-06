@@ -1,11 +1,11 @@
-/* Theme System - CSS Custom Properties for Button Component */
+/* Theme System - CSS Custom Properties */
 
 :root {
   /* Primary Colors - Based on design mockup purple/blue theme */
   --qr-color-primary: #6366f1;
   --qr-color-primary-hover: #5855eb;
   --qr-color-primary-focus: #c7d2fe;
-  
+
   /* Secondary Colors */
   --qr-color-secondary: #f8fafc;
   --qr-color-secondary-hover: #f1f5f9;
@@ -13,24 +13,24 @@
   --qr-color-secondary-border-hover: #cbd5e1;
   --qr-color-secondary-text: #475569;
   --qr-color-secondary-focus: #e2e8f0;
-  
+
   /* Ghost Colors */
   --qr-color-ghost-text: #6366f1;
   --qr-color-ghost-text-hover: #5855eb;
   --qr-color-ghost-bg-hover: #f0f9ff;
   --qr-color-ghost-focus: #c7d2fe;
-  
+
   /* Danger Colors */
   --qr-color-danger: #ef4444;
   --qr-color-danger-hover: #dc2626;
   --qr-color-danger-focus: #fecaca;
-  
+
   /* Text Colors */
   --qr-color-text-white: #ffffff;
-  
+
   /* Border Radius */
   --qr-radius-md: 8px;
-  
+
   /* Transitions */
   --qr-transition-normal: 0.2s ease-in-out;
 }
@@ -43,7 +43,7 @@
     --qr-color-secondary-border: #475569;
     --qr-color-secondary-border-hover: #64748b;
     --qr-color-secondary-text: #cbd5e1;
-    
+
     --qr-color-ghost-bg-hover: #1e293b;
   }
 }
