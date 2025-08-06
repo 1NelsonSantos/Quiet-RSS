@@ -52,3 +52,13 @@ export interface Theme {
     xl: number;
   };
 }
+
+export type ComponentVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
+export type ComponentSize = 'sm' | 'md' | 'lg';
+
+export interface BaseComponentProps {
+  variant?: ComponentVariant;
+  size?: ComponentSize;
+  disabled?: boolean;
+  loading?: boolean;
+}
