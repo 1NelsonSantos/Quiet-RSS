@@ -1,0 +1,93 @@
+/* SearchBar Component Styles */
+.qr-search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--qr-color-input-bg);
+  border: 1px solid var(--qr-color-input-border);
+  border-radius: var(--qr-radius-md);
+  transition: border-color var(--qr-transition-normal);
+}
+
+.qr-search-bar:focus-within {
+  border-color: var(--qr-color-input-border-focus);
+  outline: 2px solid var(--qr-color-primary-focus);
+  outline-offset: 2px;
+}
+
+.qr-search-bar--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Size variants */
+.qr-search-bar--sm {
+  padding: var(--qr-spacing-xs) var(--qr-spacing-sm);
+  font-size: var(--qr-font-size-sm);
+}
+
+.qr-search-bar--md {
+  padding: var(--qr-spacing-sm) var(--qr-spacing-md);
+  font-size: var(--qr-font-size-md);
+}
+
+.qr-search-bar--lg {
+  padding: var(--qr-spacing-md) var(--qr-spacing-lg);
+  font-size: var(--qr-font-size-lg);
+}
+
+/* Input field */
+.qr-search-bar__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--qr-color-input-text);
+  font-size: inherit;
+  outline: none;
+  padding: 0;
+  margin: 0 var(--qr-spacing-sm);
+}
+
+.qr-search-bar__input::placeholder {
+  color: var(--qr-color-input-placeholder);
+}
+
+.qr-search-bar__input:disabled {
+  cursor: not-allowed;
+}
+
+/* Icons */
+.qr-search-bar__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--qr-color-input-placeholder);
+  flex-shrink: 0;
+}
+
+.qr-search-bar__icon--search {
+  margin-left: 0;
+}
+
+.qr-search-bar__icon--clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+  transition: background-color var(--qr-transition-normal), color var(--qr-transition-normal);
+}
+
+.qr-search-bar__icon--clear:hover {
+  background-color: var(--qr-color-secondary-hover);
+  color: var(--qr-color-input-text);
+}
+
+.qr-search-bar__icon--clear:focus {
+  outline: 2px solid var(--qr-color-primary-focus);
+  outline-offset: 2px;
+}
+
+.qr-search-bar--disabled .qr-search-bar__icon--clear {
+  cursor: not-allowed;
+}

@@ -1,0 +1,112 @@
+/* Button Component Styles */
+.qr-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: var(--qr-radius-md);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--qr-transition-normal);
+  position: relative;
+  font-family: inherit;
+}
+
+.qr-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.qr-button:focus {
+  outline: 2px solid var(--qr-color-primary-focus);
+  outline-offset: 2px;
+}
+
+/* Button sizes */
+.qr-button--sm {
+  padding: var(--qr-spacing-xs) var(--qr-spacing-sm);
+  font-size: var(--qr-font-size-sm);
+  min-height: 32px;
+}
+
+.qr-button--md {
+  padding: var(--qr-spacing-sm) var(--qr-spacing-md);
+  font-size: var(--qr-font-size-md);
+  min-height: 40px;
+}
+
+.qr-button--lg {
+  padding: var(--qr-spacing-md) var(--qr-spacing-lg);
+  font-size: var(--qr-font-size-lg);
+  min-height: 48px;
+}
+
+/* Button variants */
+.qr-button--primary {
+  background-color: var(--qr-color-primary);
+  color: var(--qr-color-text-white);
+}
+
+.qr-button--primary:hover:not(:disabled) {
+  background-color: var(--qr-color-primary-hover);
+}
+
+.qr-button--secondary {
+  background-color: var(--qr-color-secondary);
+  color: var(--qr-color-secondary-text);
+  border: 1px solid var(--qr-color-secondary-border);
+}
+
+.qr-button--secondary:hover:not(:disabled) {
+  background-color: var(--qr-color-secondary-hover);
+  border-color: var(--qr-color-secondary-border-hover);
+}
+
+.qr-button--ghost {
+  background-color: transparent;
+  color: var(--qr-color-ghost-text);
+}
+
+.qr-button--ghost:hover:not(:disabled) {
+  background-color: var(--qr-color-ghost-bg-hover);
+  color: var(--qr-color-ghost-text-hover);
+}
+
+.qr-button--danger {
+  background-color: var(--qr-color-danger);
+  color: var(--qr-color-text-white);
+}
+
+.qr-button--danger:hover:not(:disabled) {
+  background-color: var(--qr-color-danger-hover);
+}
+
+/* Button states */
+.qr-button--full-width {
+  width: 100%;
+}
+
+.qr-button--loading {
+  pointer-events: none;
+}
+
+.qr-button__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: qr-spin 1s linear infinite;
+  margin-right: var(--qr-spacing-xs);
+}
+
+.qr-button__content--hidden {
+  opacity: 0;
+}
+
+@keyframes qr-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

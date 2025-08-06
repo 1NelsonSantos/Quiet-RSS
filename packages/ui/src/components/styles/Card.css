@@ -1,0 +1,110 @@
+/* Card Component Styles */
+.qr-card {
+  background-color: var(--qr-color-input-bg);
+  border-radius: var(--qr-radius-md);
+  transition: all var(--qr-transition-normal);
+}
+
+.qr-card--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.qr-card--interactive {
+  cursor: pointer;
+}
+
+.qr-card--interactive:focus {
+  outline: 2px solid var(--qr-color-primary-focus);
+  outline-offset: 2px;
+}
+
+/* Card variants */
+.qr-card--primary {
+  background-color: var(--qr-color-input-bg);
+  color: var(--qr-color-input-text);
+}
+
+.qr-card--secondary {
+  background-color: var(--qr-color-secondary);
+  color: var(--qr-color-secondary-text);
+}
+
+.qr-card--ghost {
+  background-color: transparent;
+  color: var(--qr-color-input-text);
+}
+
+.qr-card--danger {
+  background-color: var(--qr-color-danger-focus);
+  color: var(--qr-color-danger);
+}
+
+/* Card padding */
+.qr-card--padding-none {
+  padding: 0;
+}
+
+.qr-card--padding-sm {
+  padding: var(--qr-spacing-sm);
+}
+
+.qr-card--padding-md {
+  padding: var(--qr-spacing-md);
+}
+
+.qr-card--padding-lg {
+  padding: var(--qr-spacing-lg);
+}
+
+/* Card shadows */
+.qr-card--shadow-none {
+  box-shadow: none;
+}
+
+.qr-card--shadow-sm {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.qr-card--shadow-md {
+  box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.25);
+}
+
+.qr-card--shadow-lg {
+  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.35);
+}
+
+/* Card border */
+.qr-card--border {
+  border: 1px solid var(--qr-color-input-border);
+}
+
+/* Card hover effects */
+.qr-card--hover:hover:not(.qr-card--disabled) {
+  transform: translateY(-2px);
+}
+
+.qr-card--hover.qr-card--shadow-sm:hover:not(.qr-card--disabled) {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.qr-card--hover.qr-card--shadow-md:hover:not(.qr-card--disabled) {
+  box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.3);
+}
+
+.qr-card--hover.qr-card--shadow-lg:hover:not(.qr-card--disabled) {
+  box-shadow: 0 16px 32px -4px rgba(0, 0, 0, 0.4);
+}
+
+/* Card size variants */
+.qr-card--sm {
+  font-size: var(--qr-font-size-sm);
+}
+
+.qr-card--md {
+  font-size: var(--qr-font-size-md);
+}
+
+.qr-card--lg {
+  font-size: var(--qr-font-size-lg);
+}

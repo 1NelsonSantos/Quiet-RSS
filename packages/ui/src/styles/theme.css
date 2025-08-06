@@ -1,4 +1,4 @@
-/* Theme System - CSS Custom Properties */
+/* Theme System - CSS Custom Properties (Design Tokens) */
 
 :root {
   /* Primary Colors - Based on design mockup purple/blue theme */
@@ -28,8 +28,26 @@
   /* Text Colors */
   --qr-color-text-white: #ffffff;
 
+  /* Input Colors */
+  --qr-color-input-bg: #ffffff;
+  --qr-color-input-border: #d1d5db;
+  --qr-color-input-border-focus: #6366f1;
+  --qr-color-input-text: #374151;
+  --qr-color-input-placeholder: #9ca3af;
+
   /* Border Radius */
   --qr-radius-md: 8px;
+
+  /* Spacing */
+  --qr-spacing-xs: 0.25rem;
+  --qr-spacing-sm: 0.5rem;
+  --qr-spacing-md: 1rem;
+  --qr-spacing-lg: 1.5rem;
+
+  /* Font Sizes */
+  --qr-font-size-sm: 0.875rem;
+  --qr-font-size-md: 1rem;
+  --qr-font-size-lg: 1.125rem;
 
   /* Transitions */
   --qr-transition-normal: 0.2s ease-in-out;
@@ -45,5 +63,10 @@
     --qr-color-secondary-text: #cbd5e1;
 
     --qr-color-ghost-bg-hover: #1e293b;
+
+    --qr-color-input-bg: #1f2937;
+    --qr-color-input-border: #374151;
+    --qr-color-input-text: #f3f4f6;
+    --qr-color-input-placeholder: #9ca3af;
   }
 }
