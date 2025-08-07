@@ -15,3 +15,6 @@ export type { SearchBarProps } from './search-bar';
 
 export { Badge } from './badge';
 export type { BadgeProps } from './badge';
+
+export { IconButton } from './icon-button';
+export type { IconButtonProps } from './icon-button';
