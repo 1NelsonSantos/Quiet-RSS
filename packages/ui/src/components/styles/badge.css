@@ -1,0 +1,141 @@
+/* Badge Component Styles */
+.qr-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--qr-font-size-xs);
+  line-height: 1;
+  border-radius: 9999px;
+  min-width: fit-content;
+  white-space: nowrap;
+  transition: var(--qr-transition-normal);
+}
+
+/* Size Variants */
+.qr-badge--sm {
+  padding: 0.125rem 0.375rem;
+  font-size: var(--qr-font-size-xs);
+  min-height: 1rem;
+  min-width: 1rem;
+}
+
+.qr-badge--md {
+  padding: 0.25rem 0.5rem;
+  font-size: var(--qr-font-size-sm);
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.qr-badge--lg {
+  padding: 0.375rem 0.75rem;
+  font-size: var(--qr-font-size-md);
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+}
+
+/* Color Variants */
+.qr-badge--primary {
+  background-color: var(--qr-primary);
+  color: white;
+}
+
+.qr-badge--secondary {
+  background-color: var(--qr-secondary);
+  color: white;
+}
+
+.qr-badge--success {
+  background-color: #10b981;
+  color: white;
+}
+
+.qr-badge--warning {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.qr-badge--danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.qr-badge--info {
+  background-color: #06b6d4;
+  color: white;
+}
+
+/* Dot Variant */
+.qr-badge--dot {
+  padding: 0;
+  border-radius: 50%;
+}
+
+.qr-badge--dot.qr-badge--sm {
+  width: 0.5rem;
+  height: 0.5rem;
+  min-width: 0.5rem;
+  min-height: 0.5rem;
+}
+
+.qr-badge--dot.qr-badge--md {
+  width: 0.75rem;
+  height: 0.75rem;
+  min-width: 0.75rem;
+  min-height: 0.75rem;
+}
+
+.qr-badge--dot.qr-badge--lg {
+  width: 1rem;
+  height: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+/* Pulse Animation */
+.qr-badge--pulse {
+  animation: qr-badge-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes qr-badge-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* Hover Effects */
+.qr-badge:hover {
+  transform: scale(1.05);
+}
+
+.qr-badge--pulse:hover {
+  animation-play-state: paused;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .qr-badge--lg {
+    padding: 0.25rem 0.5rem;
+    font-size: var(--qr-font-size-sm);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .qr-badge {
+    transition: none;
+  }
+
+  .qr-badge--pulse {
+    animation: none;
+  }
+
+  .qr-badge:hover {
+    transform: none;
+  }
+}

@@ -2,21 +2,33 @@ import React, { useEffect, useRef } from 'react';
 import { BaseComponentProps } from '@quiet-rss/types';
 
 export interface ModalProps extends Omit<BaseComponentProps, 'loading' | 'variant'> {
+  // Whether the modal is visible
   isOpen: boolean;
+  // Callback when modal should be closed
   onClose: () => void;
+  // Modal content
   children: React.ReactNode;
+  // Optional modal title/header
   title?: string;
+  // Whether to show X close button (default: true)
   showCloseButton?: boolean;
+  // Whether clicking backdrop closes modal (default: true)
   closeOnBackdropClick?: boolean;
+  // Whether pressing Escape closes modal (default: true)
   closeOnEscapeKey?: boolean;
+  // Additional CSS class names for modal container
   className?: string;
+  // Inline styles for modal container
   style?: React.CSSProperties;
+  // Additional CSS class names for backdrop
   backdropClassName?: string;
+  // Additional CSS class names for content area
   contentClassName?: string;
 }
 
 /**
- * Modal component for dialogs and overlays
+ * Modal component for dialogs and overlays with focus management and accessibility
+ * Handles backdrop clicks, escape key, and focus trapping
  * @param isOpen - Whether the modal is visible
  * @param onClose - Callback when modal should be closed
  * @param children - Modal content
@@ -26,10 +38,10 @@ export interface ModalProps extends Omit<BaseComponentProps, 'loading' | 'varian
  * @param showCloseButton - Whether to show the X close button
  * @param closeOnBackdropClick - Whether clicking backdrop closes modal
  * @param closeOnEscapeKey - Whether pressing Escape closes modal
- * @param className - Additional CSS classes for modal content
- * @param style - Inline styles for modal content
- * @param backdropClassName - Additional CSS classes for backdrop
- * @param contentClassName - Additional CSS classes for content area
+ * @param className - Additional CSS class names for modal container
+ * @param style - Inline styles for modal container
+ * @param backdropClassName - Additional CSS class names for backdrop
+ * @param contentClassName - Additional CSS class names for content area
  */
 export const Modal: React.FC<ModalProps> = ({
   isOpen,

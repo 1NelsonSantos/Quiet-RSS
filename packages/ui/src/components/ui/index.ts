@@ -12,3 +12,6 @@ export type { ModalProps } from './modal';
 
 export { SearchBar } from './search-bar';
 export type { SearchBarProps } from './search-bar';
+
+export { Badge } from './badge';
+export type { BadgeProps } from './badge';

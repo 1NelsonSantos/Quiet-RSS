@@ -2,20 +2,28 @@ import React from 'react';
 import { BaseComponentProps } from '@quiet-rss/types';
 
 export interface CardProps extends Omit<BaseComponentProps, 'loading'> {
+  // Card content
   children: React.ReactNode;
+  // Additional CSS class names
   className?: string;
+  // Inline styles
   style?: React.CSSProperties;
+  // Click handler (makes card interactive)
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+  // Internal padding (default: 'md')
   padding?: 'none' | 'sm' | 'md' | 'lg';
+  // Drop shadow depth (default: 'sm')
   shadow?: 'none' | 'sm' | 'md' | 'lg';
+  // Whether to show border (default: true)
   border?: boolean;
+  // Whether to show hover effects (default: true when onClick provided)
   hover?: boolean;
 }
 
 /**
  * Reusable Card component for content containers
  * @param variant - Visual style variant (primary, secondary, ghost, danger)
- * @param size - Size variant (sm, md, lg) 
+ * @param size - Size variant (sm, md, lg)
  * @param disabled - Whether the card is disabled
  * @param padding - Internal padding (none, sm, md, lg)
  * @param shadow - Drop shadow depth (none, sm, md, lg)
@@ -40,7 +48,7 @@ export const Card: React.FC<CardProps> = ({
   style,
 }) => {
   const isInteractive = !!onClick;
-  
+
   const classes = [
     'qr-card',
     `qr-card--${variant}`,
@@ -63,7 +71,7 @@ export const Card: React.FC<CardProps> = ({
       onClick: disabled ? undefined : onClick,
       role: 'button',
       tabIndex: disabled ? -1 : 0,
-      onKeyDown: (e) => {
+      onKeyDown: e => {
         if ((e.key === 'Enter' || e.key === ' ') && onClick && !disabled) {
           e.preventDefault();
           onClick(e as any);

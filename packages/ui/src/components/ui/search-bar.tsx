@@ -2,20 +2,31 @@ import React, { useState } from 'react';
 import { BaseComponentProps } from '@quiet-rss/types';
 
 export interface SearchBarProps extends Omit<BaseComponentProps, 'loading' | 'variant'> {
+  // Current search value (controlled)
   value?: string;
+  // Callback when input value changes
   onChange?: (value: string) => void;
+  // Callback when search is performed (Enter key or search button)
   onSearch?: (value: string) => void;
+  // Callback when clear button is clicked
   onClear?: () => void;
+  // Placeholder text for the input (default: 'Search...')
   placeholder?: string;
+  // HTML id attribute for the input
   id?: string;
+  // Additional CSS class names
   className?: string;
+  // Inline styles
   style?: React.CSSProperties;
+  // Whether to auto-focus the input on mount
   autoFocus?: boolean;
+  // Whether to show clear button when there's content (default: true)
   clearable?: boolean;
 }
 
 /**
- * SearchBar component for filtering and searching content
+ * SearchBar component for filtering and searching content with keyboard navigation
+ * Includes search icon, clear button, and accessibility features
  * @param value - Current search value (controlled)
  * @param onChange - Callback when input value changes
  * @param onSearch - Callback when search is performed (Enter key or search button)
@@ -23,9 +34,10 @@ export interface SearchBarProps extends Omit<BaseComponentProps, 'loading' | 'va
  * @param placeholder - Placeholder text for the input
  * @param size - Size variant (sm, md, lg)
  * @param disabled - Whether the search bar is disabled
+ * @param id - HTML id attribute for the input
  * @param autoFocus - Whether to auto-focus the input on mount
  * @param clearable - Whether to show clear button when there's text
- * @param className - Additional CSS classes
+ * @param className - Additional CSS class names
  * @param style - Inline styles
  */
 export const SearchBar: React.FC<SearchBarProps> = ({

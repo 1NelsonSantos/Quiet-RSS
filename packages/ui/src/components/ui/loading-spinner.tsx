@@ -2,20 +2,25 @@ import React from 'react';
 import { BaseComponentProps } from '@quiet-rss/types';
 
 export interface LoadingSpinnerProps extends Omit<BaseComponentProps, 'loading'> {
+  // Additional CSS class names
   className?: string;
+  // Inline styles
   style?: React.CSSProperties;
+  // Animation type (default: 'spinner')
   type?: 'spinner' | 'dots' | 'bars';
+  // Accessible label for screen readers (default: 'Loading')
   label?: string;
 }
 
 /**
  * LoadingSpinner component for async operations and loading states
+ * Provides three different animation types with accessibility support
  * @param variant - Color variant (primary, secondary, ghost, danger)
  * @param size - Size variant (sm, md, lg)
  * @param disabled - Whether the spinner is disabled (reduces opacity)
  * @param type - Animation type (spinner, dots, bars)
  * @param label - Accessible label for screen readers
- * @param className - Additional CSS classes
+ * @param className - Additional CSS class names
  * @param style - Inline styles
  */
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
