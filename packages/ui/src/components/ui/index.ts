@@ -18,3 +18,6 @@ export type { BadgeProps } from './badge';
 
 export { IconButton } from './icon-button';
 export type { IconButtonProps } from './icon-button';
+
+export { Input } from './input';
+export type { InputProps } from './input';

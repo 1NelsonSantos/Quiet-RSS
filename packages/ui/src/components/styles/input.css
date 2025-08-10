@@ -1,0 +1,307 @@
+/* Input Component Styles */
+.qr-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.qr-input__label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--qr-font-size-sm, 0.875rem);
+  font-weight: 500;
+  color: var(--qr-color-input-text, #374151);
+  margin: 0;
+}
+
+.qr-input__required {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.qr-input {
+  width: 100%;
+  border: 1px solid var(--qr-color-input-border, #d1d5db);
+  border-radius: var(--qr-radius-md, 8px);
+  background-color: var(--qr-color-input-bg, #ffffff);
+  color: var(--qr-color-input-text, #374151);
+  font-family: inherit;
+  font-size: var(--qr-font-size-md, 1rem);
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  outline: none;
+}
+
+/* Size Variants */
+.qr-input--sm {
+  padding: 0.5rem 0.75rem;
+  font-size: var(--qr-font-size-sm);
+  min-height: 2rem;
+}
+
+.qr-input--md {
+  padding: 0.75rem 1rem;
+  font-size: var(--qr-font-size-md);
+  min-height: 2.5rem;
+}
+
+.qr-input--lg {
+  padding: 1rem 1.25rem;
+  font-size: var(--qr-font-size-lg);
+  min-height: 3rem;
+}
+
+/* Color Variants */
+.qr-input--primary:focus {
+  border-color: var(--qr-color-primary, #6366f1);
+  box-shadow: 0 0 0 3px var(--qr-color-primary-focus, rgba(99, 102, 241, 0.1));
+}
+
+.qr-input--secondary:focus {
+  border-color: var(--qr-color-secondary-border-hover, #cbd5e1);
+  box-shadow: 0 0 0 3px var(--qr-color-secondary-focus, rgba(226, 232, 240, 0.5));
+}
+
+.qr-input--ghost {
+  background-color: transparent;
+  border-color: var(--qr-color-secondary-border, #e2e8f0);
+}
+
+.qr-input--ghost:focus {
+  border-color: var(--qr-color-secondary-border-hover, #cbd5e1);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.qr-input--danger:focus {
+  border-color: var(--qr-color-danger, #ef4444);
+  box-shadow: 0 0 0 3px var(--qr-color-danger-focus, rgba(239, 68, 68, 0.1));
+}
+
+/* State Variants */
+.qr-input--error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.qr-input--error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.qr-input--success {
+  border-color: #10b981;
+  background-color: #f0fdfa;
+}
+
+.qr-input--success:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.qr-input--warning {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.qr-input--warning:focus {
+  border-color: #d97706;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+/* Disabled State */
+.qr-input--disabled {
+  background-color: #f9fafb;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.qr-input--disabled::placeholder {
+  color: #9ca3af;
+}
+
+/* Read-only State */
+.qr-input--readonly {
+  background-color: #f3f4f6;
+  cursor: default;
+}
+
+/* Hover States */
+.qr-input:hover:not(:disabled):not(:focus) {
+  border-color: #9ca3af;
+}
+
+.qr-input--error:hover:not(:disabled):not(:focus) {
+  border-color: #dc2626;
+}
+
+.qr-input--success:hover:not(:disabled):not(:focus) {
+  border-color: #059669;
+}
+
+.qr-input--warning:hover:not(:disabled):not(:focus) {
+  border-color: #d97706;
+}
+
+/* Placeholder Styles */
+.qr-input::placeholder {
+  color: var(--qr-color-input-placeholder, #9ca3af);
+  opacity: 1;
+}
+
+.qr-input:focus::placeholder {
+  opacity: 0.7;
+}
+
+/* Message Styles */
+.qr-input__message {
+  font-size: var(--qr-font-size-sm, 0.875rem);
+  line-height: 1.4;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qr-input__message--default {
+  color: #6b7280;
+}
+
+.qr-input__message--error {
+  color: #dc2626;
+}
+
+.qr-input__message--success {
+  color: #059669;
+}
+
+.qr-input__message--warning {
+  color: #d97706;
+}
+
+/* Message Icons */
+.qr-input__message--error::before {
+  content: '⚠';
+  font-weight: bold;
+}
+
+.qr-input__message--success::before {
+  content: '✓';
+  font-weight: bold;
+}
+
+.qr-input__message--warning::before {
+  content: '⚠';
+  font-weight: bold;
+}
+
+/* Number Input Specific Styles */
+.qr-input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.qr-input[type='number']::-webkit-outer-spin-button,
+.qr-input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Password Input Specific Styles */
+.qr-input[type='password'] {
+  font-family: text-security-disc, -webkit-text-security, monospace;
+}
+
+/* Search Input Specific Styles */
+.qr-input[type='search'] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.qr-input[type='search']::-webkit-search-decoration,
+.qr-input[type='search']::-webkit-search-cancel-button,
+.qr-input[type='search']::-webkit-search-results-button,
+.qr-input[type='search']::-webkit-search-results-decoration {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .qr-input--lg {
+    padding: 0.875rem 1rem;
+    font-size: var(--qr-font-size-md);
+    min-height: 2.75rem;
+  }
+
+  .qr-input__label {
+    font-size: var(--qr-font-size-xs);
+  }
+
+  .qr-input__message {
+    font-size: var(--qr-font-size-xs);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .qr-input--error {
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+
+  .qr-input--success {
+    background-color: rgba(16, 185, 129, 0.1);
+  }
+
+  .qr-input--warning {
+    background-color: rgba(245, 158, 11, 0.1);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .qr-input {
+    transition: none;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .qr-input {
+    border-width: 2px;
+  }
+
+  .qr-input:focus {
+    outline: 3px solid;
+    outline-offset: 2px;
+  }
+
+  .qr-input__message--error,
+  .qr-input__message--success,
+  .qr-input__message--warning {
+    font-weight: bold;
+  }
+}
+
+/* Focus Within Container */
+.qr-input-container:focus-within .qr-input__label {
+  color: var(--qr-primary);
+}
+
+.qr-input--error + .qr-input__label,
+.qr-input-container:focus-within .qr-input--error ~ .qr-input__label {
+  color: #dc2626;
+}
+
+.qr-input--success + .qr-input__label,
+.qr-input-container:focus-within .qr-input--success ~ .qr-input__label {
+  color: #059669;
+}
+
+.qr-input--warning + .qr-input__label,
+.qr-input-container:focus-within .qr-input--warning ~ .qr-input__label {
+  color: #d97706;
+}
