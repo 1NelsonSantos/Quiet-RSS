@@ -27,3 +27,6 @@ export type { DropdownProps, DropdownOption } from './dropdown';
 
 export { ToggleSwitch } from './toggle-switch';
 export type { ToggleSwitchProps } from './toggle-switch';
+
+export { Checkbox } from './checkbox';
+export type { CheckboxProps } from './checkbox';
