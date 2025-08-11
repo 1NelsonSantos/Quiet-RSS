@@ -30,3 +30,6 @@ export type { ToggleSwitchProps } from './toggle-switch';
 
 export { Checkbox } from './checkbox';
 export type { CheckboxProps } from './checkbox';
+
+export { Select } from './select';
+export type { SelectProps, SelectOption } from './select';
