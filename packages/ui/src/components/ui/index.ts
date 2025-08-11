@@ -21,3 +21,6 @@ export type { IconButtonProps } from './icon-button';
 
 export { Input } from './input';
 export type { InputProps } from './input';
+
+export { Dropdown } from './dropdown';
+export type { DropdownProps, DropdownOption } from './dropdown';
