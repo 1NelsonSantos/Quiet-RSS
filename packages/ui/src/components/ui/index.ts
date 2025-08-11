@@ -36,3 +36,6 @@ export type { SelectProps, SelectOption } from './select';
 
 export { Breadcrumb } from './breadcrumb';
 export type { BreadcrumbProps, BreadcrumbItem } from './breadcrumb';
+
+export { Alert } from './alert';
+export type { AlertProps } from './alert';

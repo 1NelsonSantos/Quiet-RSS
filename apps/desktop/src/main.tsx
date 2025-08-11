@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import '@quiet-rss/ui/src/styles/theme.css';
+import '@quiet-rss/ui/src/components/styles/alert.css';
 import '@quiet-rss/ui/src/components/styles/breadcrumb.css';
 import '@quiet-rss/ui/src/components/styles/button.css';
 import '@quiet-rss/ui/src/components/styles/card.css';
