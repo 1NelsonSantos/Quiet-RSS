@@ -33,3 +33,6 @@ export type { CheckboxProps } from './checkbox';
 
 export { Select } from './select';
 export type { SelectProps, SelectOption } from './select';
+
+export { Breadcrumb } from './breadcrumb';
+export type { BreadcrumbProps, BreadcrumbItem } from './breadcrumb';
