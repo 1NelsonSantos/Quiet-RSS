@@ -24,3 +24,6 @@ export type { InputProps } from './input';
 
 export { Dropdown } from './dropdown';
 export type { DropdownProps, DropdownOption } from './dropdown';
+
+export { ToggleSwitch } from './toggle-switch';
+export type { ToggleSwitchProps } from './toggle-switch';
