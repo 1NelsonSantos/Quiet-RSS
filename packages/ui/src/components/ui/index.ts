@@ -39,3 +39,6 @@ export type { BreadcrumbProps, BreadcrumbItem } from './breadcrumb';
 
 export { Alert } from './alert';
 export type { AlertProps } from './alert';
+
+export { ArticleCard } from './article-card';
+export type { ArticleCardProps } from './article-card';
