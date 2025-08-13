@@ -13,6 +13,7 @@ import '@quiet-rss/ui/src/components/styles/loading-spinner.css';
 import '@quiet-rss/ui/src/components/styles/modal.css';
 import '@quiet-rss/ui/src/components/styles/search-bar.css';
 import '@quiet-rss/ui/src/components/styles/select.css';
+import '@quiet-rss/ui/src/components/styles/sidebar.css';
 import '@quiet-rss/ui/src/components/styles/toggle-switch.css';
 import App from './App.tsx';
 

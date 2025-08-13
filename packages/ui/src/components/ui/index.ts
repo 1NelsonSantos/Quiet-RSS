@@ -45,3 +45,6 @@ export type { ArticleCardProps } from './article-card';
 
 export { Avatar } from './avatar';
 export type { AvatarProps } from './avatar';
+
+export { Sidebar } from './sidebar';
+export type { SidebarProps, SidebarSection, SidebarItem } from './sidebar';

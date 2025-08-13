@@ -1,0 +1,218 @@
+/* Sidebar Component Styles */
+.qr-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--qr-color-sidebar-bg);
+  border-right: 1px solid var(--qr-color-sidebar-border);
+  color: var(--qr-color-sidebar-text);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+/* Size variants */
+.qr-sidebar--sm {
+  width: 200px;
+}
+
+.qr-sidebar--md {
+  width: 250px;
+}
+
+.qr-sidebar--lg {
+  width: 300px;
+}
+
+/* Collapsed state */
+.qr-sidebar--collapsed {
+  width: 0;
+  min-width: 0;
+  border-right: none;
+  overflow: hidden;
+}
+
+/* Disabled state */
+.qr-sidebar--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Header */
+.qr-sidebar__header {
+  padding: var(--qr-spacing-md);
+  border-bottom: 1px solid var(--qr-color-sidebar-border);
+}
+
+/* Navigation */
+.qr-sidebar__nav {
+  flex: 1;
+  padding: 0;
+}
+
+/* Section */
+.qr-sidebar__section {
+  margin-bottom: var(--qr-spacing-lg);
+}
+
+.qr-sidebar__section:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Header */
+.qr-sidebar__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--qr-spacing-sm) var(--qr-spacing-md);
+  margin-bottom: var(--qr-spacing-sm);
+}
+
+.qr-sidebar__section-title {
+  font-size: var(--qr-font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--qr-color-sidebar-text-secondary);
+  margin: 0;
+}
+
+.qr-sidebar__section-toggle {
+  background: none;
+  border: none;
+  color: var(--qr-color-sidebar-text-secondary);
+  cursor: pointer;
+  padding: var(--qr-spacing-xs);
+  border-radius: var(--qr-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--qr-transition-normal);
+}
+
+.qr-sidebar__section-toggle:hover {
+  background-color: var(--qr-color-sidebar-hover);
+  color: var(--qr-color-sidebar-text);
+}
+
+.qr-sidebar__section-icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.qr-sidebar__section-toggle--collapsed .qr-sidebar__section-icon {
+  transform: rotate(-90deg);
+}
+
+/* Items List */
+.qr-sidebar__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.qr-sidebar__item-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Item */
+.qr-sidebar__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--qr-spacing-sm) var(--qr-spacing-md);
+  background: none;
+  border: none;
+  color: var(--qr-color-sidebar-text);
+  font-size: var(--qr-font-size-sm);
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--qr-transition-normal);
+  border-radius: 0;
+  position: relative;
+}
+
+.qr-sidebar__item:hover {
+  background-color: var(--qr-color-sidebar-hover);
+}
+
+.qr-sidebar__item--active {
+  background-color: var(--qr-color-sidebar-active);
+  color: var(--qr-color-text-white);
+  font-weight: 500;
+}
+
+.qr-sidebar__item--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--qr-color-primary);
+}
+
+/* Item Icon */
+.qr-sidebar__item-icon {
+  margin-right: var(--qr-spacing-sm);
+  font-size: var(--qr-font-size-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Item Dot (for categories with colors) */
+.qr-sidebar__item-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: var(--qr-spacing-sm);
+  flex-shrink: 0;
+}
+
+/* Item Title */
+.qr-sidebar__item-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Item Count */
+.qr-sidebar__item-count {
+  margin-left: var(--qr-spacing-sm);
+  background-color: var(--qr-color-sidebar-count-bg);
+  color: var(--qr-color-sidebar-count-text);
+  font-size: var(--qr-font-size-xs);
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.qr-sidebar__item--active .qr-sidebar__item-count {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--qr-color-text-white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .qr-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .qr-sidebar:not(.qr-sidebar--collapsed) {
+    transform: translateX(0);
+  }
+}

@@ -32,6 +32,16 @@
   /* Status Colors */
   --qr-color-warning: #f59e0b;
 
+  /* Sidebar Colors */
+  --qr-color-sidebar-bg: #ffffff;
+  --qr-color-sidebar-border: #e5e7eb;
+  --qr-color-sidebar-text: #111827;
+  --qr-color-sidebar-text-secondary: #6b7280;
+  --qr-color-sidebar-hover: #f3f4f6;
+  --qr-color-sidebar-active: #3b82f6;
+  --qr-color-sidebar-count-bg: #f3f4f6;
+  --qr-color-sidebar-count-text: #6b7280;
+
   /* Input Colors */
   --qr-color-input-bg: #ffffff;
   --qr-color-input-border: #d1d5db;
@@ -74,6 +84,15 @@
     --qr-color-ghost-bg-hover: #1e293b;
 
     --qr-color-text-secondary: #9ca3af;
+
+    --qr-color-sidebar-bg: #1f2937;
+    --qr-color-sidebar-border: #374151;
+    --qr-color-sidebar-text: #f9fafb;
+    --qr-color-sidebar-text-secondary: #9ca3af;
+    --qr-color-sidebar-hover: #374151;
+    --qr-color-sidebar-active: #3b82f6;
+    --qr-color-sidebar-count-bg: #4b5563;
+    --qr-color-sidebar-count-text: #d1d5db;
 
     --qr-color-input-bg: #1f2937;
     --qr-color-input-border: #374151;
