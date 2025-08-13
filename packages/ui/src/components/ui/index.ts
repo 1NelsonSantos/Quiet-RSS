@@ -42,3 +42,6 @@ export type { AlertProps } from './alert';
 
 export { ArticleCard } from './article-card';
 export type { ArticleCardProps } from './article-card';
+
+export { Avatar } from './avatar';
+export type { AvatarProps } from './avatar';
