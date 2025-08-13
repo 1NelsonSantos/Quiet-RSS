@@ -48,3 +48,6 @@ export type { AvatarProps } from './avatar';
 
 export { Sidebar } from './sidebar';
 export type { SidebarProps, SidebarSection, SidebarItem } from './sidebar';
+
+export { CollapsibleSection } from './collapsible-section';
+export type { CollapsibleSectionProps } from './collapsible-section';

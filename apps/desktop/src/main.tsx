@@ -8,6 +8,7 @@ import '@quiet-rss/ui/src/components/styles/breadcrumb.css';
 import '@quiet-rss/ui/src/components/styles/button.css';
 import '@quiet-rss/ui/src/components/styles/card.css';
 import '@quiet-rss/ui/src/components/styles/checkbox.css';
+import '@quiet-rss/ui/src/components/styles/collapsible-section.css';
 import '@quiet-rss/ui/src/components/styles/dropdown.css';
 import '@quiet-rss/ui/src/components/styles/loading-spinner.css';
 import '@quiet-rss/ui/src/components/styles/modal.css';

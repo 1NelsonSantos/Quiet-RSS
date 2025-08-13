@@ -1,0 +1,215 @@
+/* CollapsibleSection Component Styles */
+.qr-collapsible-section {
+  border-radius: var(--qr-radius-md);
+  overflow: hidden;
+  transition: all var(--qr-transition-normal);
+}
+
+/* Size variants */
+.qr-collapsible-section--sm {
+  font-size: var(--qr-font-size-sm);
+}
+
+.qr-collapsible-section--md {
+  font-size: var(--qr-font-size-md);
+}
+
+.qr-collapsible-section--lg {
+  font-size: var(--qr-font-size-lg);
+}
+
+/* Variant styles */
+.qr-collapsible-section--primary {
+  border: 1px solid var(--qr-color-input-border);
+  background-color: var(--qr-color-input-bg);
+}
+
+.qr-collapsible-section--secondary {
+  border: 1px solid var(--qr-color-secondary-border);
+  background-color: var(--qr-color-secondary);
+}
+
+.qr-collapsible-section--ghost {
+  border: none;
+  background-color: transparent;
+}
+
+.qr-collapsible-section--danger {
+  border: 1px solid var(--qr-color-danger);
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+/* Disabled state */
+.qr-collapsible-section--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Header */
+.qr-collapsible-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--qr-spacing-sm) var(--qr-spacing-md);
+  cursor: pointer;
+  transition: all var(--qr-transition-normal);
+  border-bottom: 1px solid var(--qr-color-input-border);
+}
+
+.qr-collapsible-section--ghost .qr-collapsible-section__header {
+  border-bottom: 1px solid var(--qr-color-input-border);
+  background-color: var(--qr-color-input-bg);
+}
+
+.qr-collapsible-section--collapsed .qr-collapsible-section__header {
+  border-bottom: none;
+}
+
+.qr-collapsible-section__header:hover:not(.qr-collapsible-section--disabled .qr-collapsible-section__header) {
+  background-color: var(--qr-color-secondary);
+}
+
+.qr-collapsible-section__header:focus-visible {
+  outline: 2px solid var(--qr-color-primary-focus);
+  outline-offset: 1px;
+}
+
+.qr-collapsible-section--ghost .qr-collapsible-section__header:hover {
+  background-color: var(--qr-color-secondary);
+}
+
+/* Header Content */
+.qr-collapsible-section__header-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.qr-collapsible-section__title {
+  font-size: var(--qr-font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--qr-color-input-text);
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.qr-collapsible-section__header-children {
+  margin-left: var(--qr-spacing-sm);
+  flex-shrink: 0;
+}
+
+/* Toggle Icon Container */
+.qr-collapsible-section__toggle {
+  color: var(--qr-color-text-secondary);
+  padding: var(--qr-spacing-xs);
+  border-radius: var(--qr-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--qr-transition-normal);
+  margin-left: var(--qr-spacing-sm);
+  flex-shrink: 0;
+}
+
+/* Toggle Icon */
+.qr-collapsible-section__icon {
+  transition: transform var(--qr-transition-normal);
+}
+
+.qr-collapsible-section__toggle--collapsed .qr-collapsible-section__icon {
+  transform: rotate(-90deg);
+}
+
+/* Content */
+.qr-collapsible-section__content {
+  background-color: var(--qr-color-input-bg);
+  border-top: 1px solid var(--qr-color-input-border);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.qr-collapsible-section__content--expanded {
+  max-height: 1000px;
+  padding: var(--qr-spacing-md);
+  opacity: 1;
+}
+
+.qr-collapsible-section__content--collapsed {
+  max-height: 0;
+  padding: 0 var(--qr-spacing-md);
+  opacity: 0;
+  border-top: none;
+}
+
+.qr-collapsible-section--ghost .qr-collapsible-section__content {
+  background-color: transparent;
+}
+
+.qr-collapsible-section--ghost .qr-collapsible-section__content--expanded {
+  border-top: 1px solid var(--qr-color-input-border);
+}
+
+.qr-collapsible-section--secondary .qr-collapsible-section__content {
+  background-color: var(--qr-color-secondary);
+}
+
+.qr-collapsible-section--secondary .qr-collapsible-section__content--expanded {
+  border-top-color: var(--qr-color-secondary-border);
+}
+
+.qr-collapsible-section--danger .qr-collapsible-section__content {
+  background-color: rgba(239, 68, 68, 0.02);
+}
+
+.qr-collapsible-section--danger .qr-collapsible-section__content--expanded {
+  border-top-color: var(--qr-color-danger);
+}
+
+/* Animation timing for different sizes */
+.qr-collapsible-section--sm .qr-collapsible-section__content {
+  transition: all 0.25s ease-in-out;
+}
+
+.qr-collapsible-section--lg .qr-collapsible-section__content {
+  transition: all 0.35s ease-in-out;
+}
+
+/* Size-specific adjustments */
+.qr-collapsible-section--sm .qr-collapsible-section__header {
+  padding: var(--qr-spacing-xs) var(--qr-spacing-sm);
+}
+
+.qr-collapsible-section--sm .qr-collapsible-section__content--expanded {
+  padding: var(--qr-spacing-sm);
+}
+
+.qr-collapsible-section--sm .qr-collapsible-section__content--collapsed {
+  padding: 0 var(--qr-spacing-sm);
+}
+
+.qr-collapsible-section--sm .qr-collapsible-section__title {
+  font-size: var(--qr-font-size-xs);
+}
+
+.qr-collapsible-section--lg .qr-collapsible-section__header {
+  padding: var(--qr-spacing-md) var(--qr-spacing-lg);
+}
+
+.qr-collapsible-section--lg .qr-collapsible-section__content--expanded {
+  padding: var(--qr-spacing-lg);
+}
+
+.qr-collapsible-section--lg .qr-collapsible-section__content--collapsed {
+  padding: 0 var(--qr-spacing-lg);
+}
+
+.qr-collapsible-section--lg .qr-collapsible-section__title {
+  font-size: var(--qr-font-size-md);
+}
