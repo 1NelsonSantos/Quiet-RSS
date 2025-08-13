@@ -54,3 +54,6 @@ export type { CollapsibleSectionProps } from './collapsible-section';
 
 export { Header } from './header';
 export type { HeaderProps } from './header';
+
+export { FeedHeader } from './feed-header';
+export type { FeedHeaderProps } from './feed-header';

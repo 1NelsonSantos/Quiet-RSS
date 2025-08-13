@@ -10,6 +10,7 @@ import '@quiet-rss/ui/src/components/styles/card.css';
 import '@quiet-rss/ui/src/components/styles/checkbox.css';
 import '@quiet-rss/ui/src/components/styles/collapsible-section.css';
 import '@quiet-rss/ui/src/components/styles/dropdown.css';
+import '@quiet-rss/ui/src/components/styles/feed-header.css';
 import '@quiet-rss/ui/src/components/styles/header.css';
 import '@quiet-rss/ui/src/components/styles/loading-spinner.css';
 import '@quiet-rss/ui/src/components/styles/modal.css';
