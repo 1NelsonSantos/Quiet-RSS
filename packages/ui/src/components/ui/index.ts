@@ -51,3 +51,6 @@ export type { SidebarProps, SidebarSection, SidebarItem } from './sidebar';
 
 export { CollapsibleSection } from './collapsible-section';
 export type { CollapsibleSectionProps } from './collapsible-section';
+
+export { Header } from './header';
+export type { HeaderProps } from './header';
