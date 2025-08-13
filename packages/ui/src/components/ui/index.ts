@@ -57,3 +57,6 @@ export type { HeaderProps } from './header';
 
 export { FeedHeader } from './feed-header';
 export type { FeedHeaderProps } from './feed-header';
+
+export { ListItem } from './list-item';
+export type { ListItemProps } from './list-item';
