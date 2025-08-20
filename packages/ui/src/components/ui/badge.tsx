@@ -16,6 +16,12 @@ export interface BadgeProps {
   pulse?: boolean;
   // Maximum number to display before showing "99+" (default: 99)
   max?: number;
+  // Mouse event handlers
+  onMouseEnter?: (event: React.MouseEvent<HTMLSpanElement>) => void;
+  onMouseLeave?: (event: React.MouseEvent<HTMLSpanElement>) => void;
+  // Focus event handlers
+  onFocus?: (event: React.FocusEvent<HTMLSpanElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLSpanElement>) => void;
   // Additional CSS class names
   className?: string;
   // Inline styles
@@ -40,6 +46,10 @@ export const Badge: React.FC<BadgeProps> = ({
   dot = false,
   pulse = false,
   max = 99,
+  onMouseEnter,
+  onMouseLeave,
+  onFocus,
+  onBlur,
   className = '',
   style,
 }) => {
@@ -76,6 +86,10 @@ export const Badge: React.FC<BadgeProps> = ({
     <span
       className={classes}
       style={style}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onFocus={onFocus}
+      onBlur={onBlur}
       role="status"
       aria-label={dot ? 'Activity indicator' : `Badge: ${displayContent}`}
     >

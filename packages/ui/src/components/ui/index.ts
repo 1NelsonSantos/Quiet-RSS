@@ -60,3 +60,6 @@ export type { FeedHeaderProps } from './feed-header';
 
 export { ListItem } from './list-item';
 export type { ListItemProps } from './list-item';
+
+export { Tooltip } from './tooltip';
+export type { TooltipProps } from './tooltip';

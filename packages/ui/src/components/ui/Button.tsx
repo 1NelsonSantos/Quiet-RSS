@@ -6,6 +6,12 @@ export interface ButtonProps extends BaseComponentProps {
   children: React.ReactNode;
   // Click event handler
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  // Mouse event handlers
+  onMouseEnter?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onMouseLeave?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  // Focus event handlers
+  onFocus?: (event: React.FocusEvent<HTMLButtonElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
   // HTML button type (default: 'button')
   type?: 'button' | 'submit' | 'reset';
   // Whether button should take full width of container
@@ -37,6 +43,10 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth = false,
   children,
   onClick,
+  onMouseEnter,
+  onMouseLeave,
+  onFocus,
+  onBlur,
   type = 'button',
   className = '',
   style,
@@ -60,6 +70,10 @@ export const Button: React.FC<ButtonProps> = ({
       style={style}
       disabled={disabled || loading}
       onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onFocus={onFocus}
+      onBlur={onBlur}
       aria-busy={loading}
     >
       {loading && <span className="qr-button__spinner" aria-hidden="true" />}

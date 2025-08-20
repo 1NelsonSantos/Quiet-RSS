@@ -19,6 +19,7 @@ import '@quiet-rss/ui/src/components/styles/select.css';
 import '@quiet-rss/ui/src/components/styles/sidebar.css';
 import '@quiet-rss/ui/src/components/styles/toggle-switch.css';
 import '@quiet-rss/ui/src/components/styles/list-item.css';
+import '@quiet-rss/ui/src/components/styles/tooltip.css';
 import App from './App.tsx';
 
 createRoot(document.getElementById('root')!).render(
