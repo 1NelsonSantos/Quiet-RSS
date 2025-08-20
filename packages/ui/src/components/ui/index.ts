@@ -66,3 +66,6 @@ export type { TooltipProps } from './tooltip';
 
 export { EmptyState } from './empty-state';
 export type { EmptyStateProps } from './empty-state';
+
+export { Slider } from './slider';
+export type { SliderProps } from './slider';
