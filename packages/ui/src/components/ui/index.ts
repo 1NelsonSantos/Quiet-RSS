@@ -69,3 +69,6 @@ export type { EmptyStateProps } from './empty-state';
 
 export { Slider } from './slider';
 export type { SliderProps } from './slider';
+
+export { TextArea } from './text-area';
+export type { TextAreaProps } from './text-area';

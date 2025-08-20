@@ -1,0 +1,277 @@
+/* TextArea Component Styles */
+.qr-textarea-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.qr-textarea__label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--qr-font-size-sm, 0.875rem);
+  font-weight: 500;
+  color: var(--qr-color-input-text, #374151);
+  margin: 0;
+}
+
+.qr-textarea__required {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.qr-textarea__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.qr-textarea {
+  width: 100%;
+  border: 1px solid var(--qr-color-input-border, #d1d5db);
+  border-radius: var(--qr-radius-md, 8px);
+  background-color: var(--qr-color-input-bg, #ffffff);
+  color: var(--qr-color-input-text, #374151);
+  font-family: inherit;
+  font-size: var(--qr-font-size-md, 1rem);
+  line-height: 1.5;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  outline: none;
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Add padding when counter is present */
+.qr-textarea__wrapper:has(.qr-textarea__count-overlay) .qr-textarea {
+  padding-bottom: 32px;
+}
+
+.qr-textarea::placeholder {
+  color: var(--qr-color-input-placeholder, #9ca3af);
+  opacity: 1;
+}
+
+.qr-textarea:hover:not(:disabled):not(:focus) {
+  border-color: var(--qr-color-input-border-focus, #6366f1);
+}
+
+.qr-textarea:focus {
+  border-color: var(--qr-color-input-border-focus, #6366f1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.qr-textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--qr-color-secondary, #f8fafc);
+  border-color: var(--qr-color-secondary-border, #e2e8f0);
+}
+
+.qr-textarea:read-only {
+  background-color: var(--qr-color-secondary, #f8fafc);
+  border-color: var(--qr-color-secondary-border, #e2e8f0);
+  cursor: default;
+}
+
+/* Size variants */
+.qr-textarea--sm {
+  padding: 0.5rem 0.75rem;
+  font-size: var(--qr-font-size-sm, 0.875rem);
+  min-height: 4rem;
+}
+
+.qr-textarea--md {
+  padding: 0.75rem 1rem;
+  font-size: var(--qr-font-size-md, 1rem);
+  min-height: 5rem;
+}
+
+.qr-textarea--lg {
+  padding: 1rem 1.25rem;
+  font-size: var(--qr-font-size-lg, 1.125rem);
+  min-height: 6rem;
+}
+
+/* State variants */
+.qr-textarea--error,
+.qr-textarea--error:focus {
+  border-color: var(--qr-color-danger, #ef4444);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.qr-textarea--success {
+  border-color: #10b981;
+}
+
+.qr-textarea--success:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.qr-textarea--warning {
+  border-color: var(--qr-color-warning, #f59e0b);
+}
+
+.qr-textarea--warning:focus {
+  border-color: var(--qr-color-warning, #f59e0b);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+/* Auto-resize functionality */
+.qr-textarea--auto-resize {
+  resize: none;
+  overflow: hidden;
+  min-height: auto;
+}
+
+.qr-textarea--auto-resize.qr-textarea--sm {
+  min-height: 60px;
+}
+
+.qr-textarea--auto-resize.qr-textarea--md {
+  min-height: 80px;
+}
+
+.qr-textarea--auto-resize.qr-textarea--lg {
+  min-height: 100px;
+}
+
+/* Disabled state */
+.qr-textarea--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--qr-color-secondary);
+  border-color: var(--qr-color-secondary-border);
+}
+
+.qr-textarea--disabled::placeholder {
+  color: var(--qr-color-text-secondary);
+}
+
+/* Read-only state */
+.qr-textarea--readonly {
+  background-color: var(--qr-color-secondary);
+  border-color: var(--qr-color-secondary-border);
+  cursor: default;
+}
+
+/* Helper text */
+.qr-textarea__helper {
+  font-size: var(--qr-font-size-xs, 0.75rem);
+  color: var(--qr-color-text-secondary, #6b7280);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Error message */
+.qr-textarea__error {
+  font-size: var(--qr-font-size-xs, 0.75rem);
+  color: var(--qr-color-danger, #ef4444);
+  line-height: 1.4;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.qr-textarea__error::before {
+  content: '⚠';
+  flex-shrink: 0;
+}
+
+/* Label size adjustments */
+.qr-textarea--sm .qr-textarea__label {
+  font-size: var(--qr-font-size-xs);
+}
+
+.qr-textarea--lg .qr-textarea__label {
+  font-size: var(--qr-font-size-md);
+}
+
+/* Character count overlay inside textarea */
+.qr-textarea__count-overlay {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: var(--qr-font-size-xs, 0.75rem);
+  color: var(--qr-color-text-secondary, #6b7280);
+  font-weight: 700;
+  background: var(--qr-color-input-bg, #ffffff);
+  padding: 2px 6px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease-in-out;
+  pointer-events: none;
+  user-select: none;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+}
+
+.qr-textarea__count-overlay--warning {
+  color: var(--qr-color-warning, #f59e0b);
+  background: #fffbeb;
+  border: 1px solid #fed7aa;
+}
+
+.qr-textarea__count-overlay--error {
+  color: var(--qr-color-danger, #ef4444);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+/* Touch device improvements */
+@media (pointer: coarse) {
+  .qr-textarea {
+    min-height: 100px;
+    font-size: 16px;
+  }
+
+  .qr-textarea--sm {
+    min-height: 80px;
+    font-size: 16px;
+  }
+
+  .qr-textarea--lg {
+    min-height: 120px;
+    font-size: 18px;
+  }
+}
+
+/* Dark theme specific adjustments */
+@media (prefers-color-scheme: dark) {
+  .qr-textarea {
+    color: var(--qr-color-input-text);
+    background-color: var(--qr-color-input-bg);
+    border-color: var(--qr-color-input-border);
+  }
+
+  .qr-textarea::placeholder {
+    color: var(--qr-color-input-placeholder);
+  }
+}
+
+/* Focus-within for container styling */
+.qr-textarea-container:focus-within .qr-textarea__label {
+  color: var(--qr-color-primary, #6366f1);
+}
+
+.qr-textarea-container:has(.qr-textarea--error) .qr-textarea__label {
+  color: var(--qr-color-danger, #ef4444);
+}
+
+/* Smooth animations */
+.qr-textarea,
+.qr-textarea__label {
+  transition: all 0.15s ease-in-out;
+}
+
+.qr-textarea {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif;
+}
+
+.qr-textarea:focus-visible {
+  border-color: var(--qr-color-input-border-focus, #6366f1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  outline: none;
+}

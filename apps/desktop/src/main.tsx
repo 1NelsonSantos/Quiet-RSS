@@ -22,6 +22,7 @@ import '@quiet-rss/ui/src/components/styles/list-item.css';
 import '@quiet-rss/ui/src/components/styles/tooltip.css';
 import '@quiet-rss/ui/src/components/styles/empty-state.css';
 import '@quiet-rss/ui/src/components/styles/slider.css';
+import '@quiet-rss/ui/src/components/styles/text-area.css';
 import App from './App.tsx';
 
 createRoot(document.getElementById('root')!).render(
