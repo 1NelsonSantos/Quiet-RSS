@@ -63,3 +63,6 @@ export type { ListItemProps } from './list-item';
 
 export { Tooltip } from './tooltip';
 export type { TooltipProps } from './tooltip';
+
+export { EmptyState } from './empty-state';
+export type { EmptyStateProps } from './empty-state';
