@@ -75,3 +75,6 @@ export type { TextAreaProps } from './text-area';
 
 export { RadioGroup } from './radio-group';
 export type { RadioGroupProps, RadioOption } from './radio-group';
+
+export { Tabs } from './tabs';
+export type { TabsProps, TabItem } from './tabs';
