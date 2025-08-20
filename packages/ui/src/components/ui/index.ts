@@ -72,3 +72,6 @@ export type { SliderProps } from './slider';
 
 export { TextArea } from './text-area';
 export type { TextAreaProps } from './text-area';
+
+export { RadioGroup } from './radio-group';
+export type { RadioGroupProps, RadioOption } from './radio-group';
