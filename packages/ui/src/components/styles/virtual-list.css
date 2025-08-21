@@ -1,0 +1,143 @@
+/* Virtual List Component Styles */
+.qr-virtual-list {
+  --qr-virtual-list-border-color: var(--qr-color-border);
+  --qr-virtual-list-background: var(--qr-color-background);
+  --qr-virtual-list-scrollbar-thumb: var(--qr-color-surface-3);
+  --qr-virtual-list-scrollbar-track: var(--qr-color-surface-1);
+  --qr-virtual-list-empty-text-color: var(--qr-color-text-secondary);
+
+  position: relative;
+  background-color: var(--qr-virtual-list-background);
+  border-radius: var(--qr-border-radius-md);
+  overflow: hidden;
+}
+
+.qr-virtual-list--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Size variants */
+.qr-virtual-list--sm {
+  --qr-virtual-list-padding: var(--qr-spacing-sm);
+}
+
+.qr-virtual-list--md {
+  --qr-virtual-list-padding: var(--qr-spacing-md);
+}
+
+.qr-virtual-list--lg {
+  --qr-virtual-list-padding: var(--qr-spacing-lg);
+}
+
+/* Scroll container */
+.qr-virtual-list__scroll-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  outline: none;
+}
+
+.qr-virtual-list__scroll-container::-webkit-scrollbar-track {
+  background: var(--qr-virtual-list-scrollbar-track);
+  border-radius: var(--qr-border-radius-sm);
+}
+
+.qr-virtual-list__scroll-container::-webkit-scrollbar-thumb {
+  background: var(--qr-virtual-list-scrollbar-thumb);
+  border-radius: var(--qr-border-radius-sm);
+  transition: background-color var(--qr-transition-duration-fast) ease;
+}
+
+.qr-virtual-list__scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--qr-color-surface-4);
+}
+
+/* Spacer, this contains all virtualized items */
+.qr-virtual-list__spacer {
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+}
+
+/* Individual virtualized items */
+.qr-virtual-list__item {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  contain: layout style paint;
+}
+
+.qr-virtual-list__item--hidden {
+  /* Items outside viewport but within overscan */
+  visibility: hidden;
+}
+
+/* Performance optimization during scrolling */
+.qr-virtual-list--scrolling .qr-virtual-list__item {
+  pointer-events: none;
+}
+
+/* Empty state */
+.qr-virtual-list__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--qr-virtual-list-empty-text-color);
+  font-size: var(--qr-font-size-md);
+  text-align: center;
+  padding: var(--qr-spacing-lg);
+}
+
+/* Loading state */
+.qr-virtual-list__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 200px;
+}
+
+/* Focus styles for accessibility */
+.qr-virtual-list__scroll-container:focus {
+  outline: 2px solid var(--qr-color-primary);
+  outline-offset: -2px;
+}
+
+.qr-virtual-list--disabled .qr-virtual-list__scroll-container:focus {
+  outline: none;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .qr-virtual-list__scroll-container::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Touch scrolling momentum */
+  .qr-virtual-list__scroll-container {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Print styles */
+@media print {
+  .qr-virtual-list {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  .qr-virtual-list__scroll-container {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  .qr-virtual-list__item {
+    position: static !important;
+    page-break-inside: avoid;
+  }
+}

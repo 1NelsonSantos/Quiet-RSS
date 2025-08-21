@@ -78,3 +78,6 @@ export type { RadioGroupProps, RadioOption } from './radio-group';
 
 export { Tabs } from './tabs';
 export type { TabsProps, TabItem } from './tabs';
+
+export { VirtualList } from './virtual-list';
+export type { VirtualListProps, VirtualListItem } from './virtual-list';
