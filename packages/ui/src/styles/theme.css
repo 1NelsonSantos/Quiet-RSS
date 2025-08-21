@@ -1,7 +1,6 @@
-/* Theme System - CSS Custom Properties (Design Tokens) */
-
+/* Theme System */
 :root {
-  /* Primary Colors - Based on design mockup purple/blue theme */
+  /* Primary Colors */
   --qr-color-primary: #6366f1;
   --qr-color-primary-hover: #5855eb;
   --qr-color-primary-focus: #c7d2fe;

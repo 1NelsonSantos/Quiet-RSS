@@ -1,89 +1,92 @@
-export { Button } from './button';
-export type { ButtonProps } from './button';
+// UI Primitives
+export { Button } from './button/button';
+export type { ButtonProps } from './button/button';
 
-export { Card } from './card';
-export type { CardProps } from './card';
+export { Card } from './card/card';
+export type { CardProps } from './card/card';
 
-export { LoadingSpinner } from './loading-spinner';
-export type { LoadingSpinnerProps } from './loading-spinner';
+export { LoadingSpinner } from './loading-spinner/loading-spinner';
+export type { LoadingSpinnerProps } from './loading-spinner/loading-spinner';
 
-export { Modal } from './modal';
-export type { ModalProps } from './modal';
+export { Modal } from './modal/modal';
+export type { ModalProps } from './modal/modal';
 
-export { SearchBar } from './search-bar';
-export type { SearchBarProps } from './search-bar';
+export { Badge } from './badge/badge';
+export type { BadgeProps } from './badge/badge';
 
-export { Badge } from './badge';
-export type { BadgeProps } from './badge';
+export { IconButton } from './icon-button/icon-button';
+export type { IconButtonProps } from './icon-button/icon-button';
 
-export { IconButton } from './icon-button';
-export type { IconButtonProps } from './icon-button';
+export { Input } from './input/input';
+export type { InputProps } from './input/input';
 
-export { Input } from './input';
-export type { InputProps } from './input';
+export { Dropdown } from './dropdown/dropdown';
+export type { DropdownProps, DropdownOption } from './dropdown/dropdown';
 
-export { Dropdown } from './dropdown';
-export type { DropdownProps, DropdownOption } from './dropdown';
+export { ToggleSwitch } from './toggle-switch/toggle-switch';
+export type { ToggleSwitchProps } from './toggle-switch/toggle-switch';
 
-export { ToggleSwitch } from './toggle-switch';
-export type { ToggleSwitchProps } from './toggle-switch';
+export { Checkbox } from './checkbox/checkbox';
+export type { CheckboxProps } from './checkbox/checkbox';
 
-export { Checkbox } from './checkbox';
-export type { CheckboxProps } from './checkbox';
+export { Select } from './select/select';
+export type { SelectProps, SelectOption } from './select/select';
 
-export { Select } from './select';
-export type { SelectProps, SelectOption } from './select';
+export { Breadcrumb } from './breadcrumb/breadcrumb';
+export type { BreadcrumbProps, BreadcrumbItem } from './breadcrumb/breadcrumb';
 
-export { Breadcrumb } from './breadcrumb';
-export type { BreadcrumbProps, BreadcrumbItem } from './breadcrumb';
+export { Alert } from './alert/alert';
+export type { AlertProps } from './alert/alert';
 
-export { Alert } from './alert';
-export type { AlertProps } from './alert';
+export { Avatar } from './avatar/avatar';
+export type { AvatarProps } from './avatar/avatar';
 
-export { ArticleCard } from './article-card';
-export type { ArticleCardProps } from './article-card';
+export { Tooltip } from './tooltip/tooltip';
+export type { TooltipProps } from './tooltip/tooltip';
 
-export { Avatar } from './avatar';
-export type { AvatarProps } from './avatar';
+export { EmptyState } from './empty-state/empty-state';
+export type { EmptyStateProps } from './empty-state/empty-state';
 
-export { Sidebar } from './sidebar';
-export type { SidebarProps, SidebarSection, SidebarItem } from './sidebar';
+export { Slider } from './slider/slider';
+export type { SliderProps } from './slider/slider';
 
-export { CollapsibleSection } from './collapsible-section';
-export type { CollapsibleSectionProps } from './collapsible-section';
+export { TextArea } from './text-area/text-area';
+export type { TextAreaProps } from './text-area/text-area';
 
-export { Header } from './header';
-export type { HeaderProps } from './header';
+export { RadioGroup } from './radio-group/radio-group';
+export type { RadioGroupProps, RadioOption } from './radio-group/radio-group';
 
-export { FeedHeader } from './feed-header';
-export type { FeedHeaderProps } from './feed-header';
+export { Tabs } from './tabs/tabs';
+export type { TabsProps, TabItem } from './tabs/tabs';
 
-export { ListItem } from './list-item';
-export type { ListItemProps } from './list-item';
+// Layout Components
+export { AppLayout } from '../layout/app-layout/app-layout';
+export type { AppLayoutProps } from '../layout/app-layout/app-layout';
 
-export { Tooltip } from './tooltip';
-export type { TooltipProps } from './tooltip';
+export { Sidebar } from '../layout/sidebar/sidebar';
+export type { SidebarProps, SidebarSection, SidebarItem } from '../layout/sidebar/sidebar';
 
-export { EmptyState } from './empty-state';
-export type { EmptyStateProps } from './empty-state';
+export { CollapsibleSection } from '../layout/collapsible-section/collapsible-section';
+export type { CollapsibleSectionProps } from '../layout/collapsible-section/collapsible-section';
 
-export { Slider } from './slider';
-export type { SliderProps } from './slider';
+export { Header } from '../layout/header/header';
+export type { HeaderProps } from '../layout/header/header';
 
-export { TextArea } from './text-area';
-export type { TextAreaProps } from './text-area';
+// Feature Components
+export { ArticleCard } from '../features/article-card/article-card';
+export type { ArticleCardProps } from '../features/article-card/article-card';
 
-export { RadioGroup } from './radio-group';
-export type { RadioGroupProps, RadioOption } from './radio-group';
+export { FeedHeader } from '../features/feed-header/feed-header';
+export type { FeedHeaderProps } from '../features/feed-header/feed-header';
 
-export { Tabs } from './tabs';
-export type { TabsProps, TabItem } from './tabs';
+export { ListItem } from '../features/list-item/list-item';
+export type { ListItemProps } from '../features/list-item/list-item';
 
-export { VirtualList } from './virtual-list';
-export type { VirtualListProps, VirtualListItem } from './virtual-list';
+export { VirtualList } from '../features/virtual-list/virtual-list';
+export type { VirtualListProps, VirtualListItem } from '../features/virtual-list/virtual-list';
 
-export { SearchResults, SearchHighlight } from './search-results';
-export type { SearchResultsProps, SearchHighlightProps, SearchArticleCardProps } from './search-results';
+export { SearchResults, SearchHighlight } from '../features/search-results/search-results';
+export type { SearchResultsProps, SearchHighlightProps, SearchArticleCardProps } from '../features/search-results/search-results';
 
-export { AppLayout } from './app-layout';
-export type { AppLayoutProps } from './app-layout';
+export { SearchBar } from '../features/search-bar/search-bar';
+export type { SearchBarProps } from '../features/search-bar/search-bar';

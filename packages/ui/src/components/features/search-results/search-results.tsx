@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { BaseComponentProps } from '@quiet-rss/types';
-import { VirtualList, VirtualListItem, ArticleCard } from './index';
+import { VirtualList, VirtualListItem } from '../virtual-list/virtual-list';
+import { ArticleCard } from '../article-card/article-card';
 
 // Search Highlight utility component
 interface SearchHighlightProps {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BaseComponentProps } from '@quiet-rss/types';
-import { Avatar } from './avatar';
-import { Badge } from './badge';
+import { Avatar } from '../../ui/avatar/avatar';
+import { Badge } from '../../ui/badge/badge';
 
 export interface ListItemProps extends Omit<BaseComponentProps, 'loading'> {
   // Item title/label

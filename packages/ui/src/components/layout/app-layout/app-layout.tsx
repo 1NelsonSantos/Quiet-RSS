@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BaseComponentProps } from '@quiet-rss/types';
-import { Header, HeaderProps } from './header';
-import { Sidebar, SidebarProps, SidebarSection } from './sidebar';
+import { Header, HeaderProps } from '../header/header';
+import { Sidebar, SidebarProps, SidebarSection } from '../sidebar/sidebar';
 
 export interface AppLayoutProps extends Omit<BaseComponentProps, 'loading'> {
   // Header configuration

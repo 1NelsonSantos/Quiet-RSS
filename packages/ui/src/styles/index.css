@@ -3,34 +3,38 @@
 /* Theme and Design Tokens */
 @import './theme.css';
 
-/* Component Styles */
-@import '../components/styles/alert.css';
-@import '../components/styles/article-card.css';
-@import '../components/styles/avatar.css';
-@import '../components/styles/badge.css';
-@import '../components/styles/breadcrumb.css';
-@import '../components/styles/button.css';
-@import '../components/styles/card.css';
-@import '../components/styles/checkbox.css';
-@import '../components/styles/collapsible-section.css';
-@import '../components/styles/dropdown.css';
-@import '../components/styles/feed-header.css';
-@import '../components/styles/header.css';
-@import '../components/styles/icon-button.css';
-@import '../components/styles/input.css';
-@import '../components/styles/loading-spinner.css';
-@import '../components/styles/modal.css';
-@import '../components/styles/search-bar.css';
-@import '../components/styles/select.css';
-@import '../components/styles/sidebar.css';
-@import '../components/styles/toggle-switch.css';
-@import '../components/styles/list-item.css';
-@import '../components/styles/tooltip.css';
-@import '../components/styles/empty-state.css';
-@import '../components/styles/slider.css';
-@import '../components/styles/text-area.css';
-@import '../components/styles/radio-group.css';
-@import '../components/styles/tabs.css';
-@import '../components/styles/virtual-list.css';
-@import '../components/styles/search-results.css';
-@import '../components/styles/app-layout.css';
+/* UI Primitive Component Styles */
+@import '../components/ui/alert/alert.css';
+@import '../components/ui/avatar/avatar.css';
+@import '../components/ui/badge/badge.css';
+@import '../components/ui/breadcrumb/breadcrumb.css';
+@import '../components/ui/button/button.css';
+@import '../components/ui/card/card.css';
+@import '../components/ui/checkbox/checkbox.css';
+@import '../components/ui/dropdown/dropdown.css';
+@import '../components/ui/empty-state/empty-state.css';
+@import '../components/ui/icon-button/icon-button.css';
+@import '../components/ui/input/input.css';
+@import '../components/ui/loading-spinner/loading-spinner.css';
+@import '../components/ui/modal/modal.css';
+@import '../components/ui/radio-group/radio-group.css';
+@import '../components/ui/select/select.css';
+@import '../components/ui/slider/slider.css';
+@import '../components/ui/tabs/tabs.css';
+@import '../components/ui/text-area/text-area.css';
+@import '../components/ui/toggle-switch/toggle-switch.css';
+@import '../components/ui/tooltip/tooltip.css';
+
+/* Layout Component Styles */
+@import '../components/layout/app-layout/app-layout.css';
+@import '../components/layout/collapsible-section/collapsible-section.css';
+@import '../components/layout/header/header.css';
+@import '../components/layout/sidebar/sidebar.css';
+
+/* Feature Component Styles */
+@import '../components/features/article-card/article-card.css';
+@import '../components/features/feed-header/feed-header.css';
+@import '../components/features/list-item/list-item.css';
+@import '../components/features/search-bar/search-bar.css';
+@import '../components/features/search-results/search-results.css';
+@import '../components/features/virtual-list/virtual-list.css';

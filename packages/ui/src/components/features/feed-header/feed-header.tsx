@@ -1,6 +1,6 @@
 import React from 'react';
 import { BaseComponentProps } from '@quiet-rss/types';
-import { Avatar } from './avatar';
+import { Avatar } from '../../ui/avatar/avatar';
 
 export interface FeedHeaderProps extends Omit<BaseComponentProps, 'loading'> {
   // Feed title/name
