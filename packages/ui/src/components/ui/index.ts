@@ -81,3 +81,6 @@ export type { TabsProps, TabItem } from './tabs';
 
 export { VirtualList } from './virtual-list';
 export type { VirtualListProps, VirtualListItem } from './virtual-list';
+
+export { SearchResults, SearchHighlight } from './search-results';
+export type { SearchResultsProps, SearchHighlightProps, SearchArticleCardProps } from './search-results';
