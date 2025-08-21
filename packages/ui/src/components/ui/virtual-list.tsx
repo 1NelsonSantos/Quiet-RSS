@@ -408,7 +408,7 @@ export const VirtualList = <T extends VirtualListItem>({
         }}
       >
         <div className="qr-virtual-list__spacer" style={{ height: totalHeight, position: 'relative' }}>
-          {renderVisibleItems()}
+          <div style={{ position: 'relative', top: getItemOffset(range.startIndex) }}>{renderVisibleItems()}</div>
         </div>
       </div>
     </div>

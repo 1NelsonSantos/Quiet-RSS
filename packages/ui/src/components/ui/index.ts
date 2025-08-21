@@ -84,3 +84,6 @@ export type { VirtualListProps, VirtualListItem } from './virtual-list';
 
 export { SearchResults, SearchHighlight } from './search-results';
 export type { SearchResultsProps, SearchHighlightProps, SearchArticleCardProps } from './search-results';
+
+export { AppLayout } from './app-layout';
+export type { AppLayoutProps } from './app-layout';

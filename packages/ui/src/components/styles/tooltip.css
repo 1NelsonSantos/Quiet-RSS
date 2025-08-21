@@ -7,8 +7,8 @@
 .qr-tooltip {
   position: absolute;
   z-index: 1000;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: var(--qr-color-surface-3);
+  color: var(--qr-color-text-white);
   padding: var(--qr-spacing-xs) var(--qr-spacing-sm);
   border-radius: var(--qr-radius-sm);
   font-size: var(--qr-font-size-sm);
@@ -91,7 +91,7 @@
   left: 50%;
   transform: translateX(-50%);
   border-width: 4px 4px 0 4px;
-  border-color: #1a1a1a transparent transparent transparent;
+  border-color: var(--qr-color-surface-3) transparent transparent transparent;
 }
 
 .qr-tooltip--bottom .qr-tooltip__arrow {
@@ -99,7 +99,7 @@
   left: 50%;
   transform: translateX(-50%);
   border-width: 0 4px 4px 4px;
-  border-color: transparent transparent #1a1a1a transparent;
+  border-color: transparent transparent var(--qr-color-surface-3) transparent;
 }
 
 .qr-tooltip--left .qr-tooltip__arrow {
@@ -107,7 +107,7 @@
   top: 50%;
   transform: translateY(-50%);
   border-width: 4px 0 4px 4px;
-  border-color: transparent transparent transparent #1a1a1a;
+  border-color: transparent transparent transparent var(--qr-color-surface-3);
 }
 
 .qr-tooltip--right .qr-tooltip__arrow {
@@ -115,7 +115,7 @@
   top: 50%;
   transform: translateY(-50%);
   border-width: 4px 4px 4px 0;
-  border-color: transparent #1a1a1a transparent transparent;
+  border-color: transparent var(--qr-color-surface-3) transparent transparent;
 }
 
 /* Long content handling */

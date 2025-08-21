@@ -27,27 +27,50 @@
 
   /* Text Colors */
   --qr-color-text-white: #ffffff;
-  --qr-color-text-secondary: #6b7280;
+  --qr-color-text-secondary: #94a3b8;
+  --qr-color-text-primary: #f8fafc;
+
+  /* Background/Surface Colors */
+  --qr-color-background: #1e2936;
+  --qr-color-surface-1: #2c3e50;
+  --qr-color-surface-2: #34495e;
+  --qr-color-surface-3: #2c3e50;
+
+  /* Border Colors */
+  --qr-color-border: #475569;
+  --qr-color-border-hover: #64748b;
+  --qr-color-border-light: #3f4f5f;
+
+  /* Semantic Colors */
+  --qr-color-text-muted: #94a3b8;
+  --qr-color-text-light: #cbd5e1;
+  --qr-color-text-dark: #f8fafc;
+  --qr-color-selection-bg: #1e40af;
+  --qr-color-hover-bg: #3f4f5f;
+  --qr-color-read-bg: #374151;
+  --qr-color-unread-indicator: #3b82f6;
+  --qr-color-star: #fbbf24;
+  --qr-color-button-border: #64748b;
 
   /* Status Colors */
   --qr-color-warning: #f59e0b;
 
   /* Sidebar Colors */
-  --qr-color-sidebar-bg: #ffffff;
-  --qr-color-sidebar-border: #e5e7eb;
-  --qr-color-sidebar-text: #111827;
-  --qr-color-sidebar-text-secondary: #6b7280;
-  --qr-color-sidebar-hover: #f3f4f6;
+  --qr-color-sidebar-bg: #1e2936;
+  --qr-color-sidebar-border: #475569;
+  --qr-color-sidebar-text: #f8fafc;
+  --qr-color-sidebar-text-secondary: #94a3b8;
+  --qr-color-sidebar-hover: #374151;
   --qr-color-sidebar-active: #3b82f6;
-  --qr-color-sidebar-count-bg: #f3f4f6;
-  --qr-color-sidebar-count-text: #6b7280;
+  --qr-color-sidebar-count-bg: #374151;
+  --qr-color-sidebar-count-text: #cbd5e1;
 
-  /* Input Colors */
-  --qr-color-input-bg: #ffffff;
-  --qr-color-input-border: #d1d5db;
+  /* Input Colors - Dark theme */
+  --qr-color-input-bg: #374151;
+  --qr-color-input-border: #64748b;
   --qr-color-input-border-focus: #6366f1;
-  --qr-color-input-text: #374151;
-  --qr-color-input-placeholder: #9ca3af;
+  --qr-color-input-text: #f8fafc;
+  --qr-color-input-placeholder: #94a3b8;
 
   /* Border Radius */
   --qr-radius-md: 8px;
@@ -84,6 +107,15 @@
     --qr-color-ghost-bg-hover: #1e293b;
 
     --qr-color-text-secondary: #9ca3af;
+    --qr-color-text-primary: #f9fafb;
+
+    --qr-color-background: #111827;
+    --qr-color-surface-1: #1f2937;
+    --qr-color-surface-2: #374151;
+    --qr-color-surface-3: #4b5563;
+
+    --qr-color-border: #374151;
+    --qr-color-border-hover: #4b5563;
 
     --qr-color-sidebar-bg: #1f2937;
     --qr-color-sidebar-border: #374151;
